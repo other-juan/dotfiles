@@ -1,0 +1,14 @@
+# Mis tomizaciones y aliases
+alias chux='chmod -v u+x '
+alias c='clear'
+export BROWSER=lynx
+export VISUAL=vim
+export EDITOR=vim
+
+
+
+# Vagrant
+export VAGRANT_WSL_ENABLE_WINDOWS_ACCESS="1"
+export PATH="$PATH:/mnt/c/Program Files/Oracle/VirtualBox"
+
+# export DOCKER_HOST=tcp://127.0.0.1:2375 # No se porque no deja que funcionen los comandos docker con el docker-desktop

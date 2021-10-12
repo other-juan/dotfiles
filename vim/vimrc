@@ -1,0 +1,60 @@
+" Configuracion Basica
+set nocompatible
+"
+" Tamano de historial
+set history=1000
+" Vista
+colorscheme darkblue
+" numero de linea
+set number
+set relativenumber
+"columna y fila en la esquina inferior derecha
+set ruler
+"
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" " " Probar
+" set paste " -> para que se formatee bien pegando con el mouse. Tambien
+" existe una opcion llamada 'pastetoggle' para controlarlo.
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"
+" Manejo de Tab
+"
+" espacios para Tab cuando se usa identacion con '>' y '<'
+set shiftwidth=2
+" reemplaza Tab en edicion por la cantidad de espacios configurada
+set softtabstop=2
+" espacios configurados para equivalencia con Tab
+set tabstop=2
+" asume la identacion de la linea anterior
+set autoindent
+" debe usarse junto con autoindent. Toma en cuenta la sintaxis para identar
+set smartindent
+" reemplaza espacio tabulado con espacios sencillos configurados en tabstop
+set expandtab
+" para que el Backspace funcione correctamente con el tabstop
+set smarttab
+"
+"
+"
+" busquedas resaltadas
+set hlsearch
+set incsearch
+set linebreak
+"
+"
+" buscar alrededor del texto
+set wrapscan
+
+" Cargar plugins solo si existen
+if filereadable(expand("~/.vim/autoload/plug.vim"))
+
+  call plug#begin('~/.vimplugins)
+  Plug 'provider/vim-plugin'
+  call plug$end()
+endif
+
+function! Greet()
+  echo 'Hello world'
+  " para llamar la funcion:
+  " :call Greet()
+endfunc
